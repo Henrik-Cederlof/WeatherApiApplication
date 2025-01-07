@@ -37,6 +37,7 @@ body {
   .country-name {
     margin: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
   }
+
   .city-name {
     font-size: clamp(1rem, 0.75rem + 3.333vw, 2.75rem);
   }
@@ -48,7 +49,23 @@ body {
   }
 }
 
-.condition-icon {
-  width: 100px;
-  height: 100px;
+
+  
+  .remove-button {
+    position: relative;
+    left: 150px;
+    top: 25px;
+    background-color: #f0f0f0;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  
+  .condition-icon {
+    width: 100px;
+    height: 100px;  
+
 }

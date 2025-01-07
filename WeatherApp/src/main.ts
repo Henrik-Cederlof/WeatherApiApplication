@@ -1,6 +1,6 @@
-import { getTemeratureBYCity } from "./functions/getTemeratureBYCity";
-import { getCloudsByCity } from "./functions/getCloudsByCity";
-import { getWeatherCondition } from "./functions/getWeatherCondition";
+import { getTemeratureBYCity } from './functions/getTemeratureBYCity';
+import { getWeatherCondition } from './functions/getWeatherCondition';
+import { getCurrentTime } from './functions/getCurrentTime';
 
 import "./style.scss";
 import { getCountryByCity } from "./functions/getCountryByCity";
@@ -26,6 +26,7 @@ const createWeatherCard = (
   const removeBtn = document.createElement("div");
   leftSection.className = "left-section";
   removeBtn.className = "remove-btn";
+
 
   const cityElement = document.createElement("h2");
   cityElement.className = "city-name";
@@ -56,11 +57,11 @@ const createWeatherCard = (
     card.remove();
   });
 
-  removeButton.appendChild(removeBtn);
   // Lägg till i kortet
   card.appendChild(removeBtn);
   card.appendChild(leftSection);
   card.appendChild(temeratureElement);
+  card.appendChild(removeButton);
 
   return card;
 };
