@@ -1,43 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-
-    font-family: 'Roboto', sans-serif;
-    background-color: #c5d5ff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #c5d5ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 #main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 .weather-card {
-    width: 300px;
-    height: 120px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    
-    .temperature {
-      font-size: 60px;
-      font-weight: 700;
-      align-items: end;
-    }
+  width: 300px;
+  height: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 
-    
+  .country-name {
+    margin: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
   }
+
+  .city-name {
+    font-size: clamp(1rem, 0.75rem + 3.333vw, 2.75rem);
+  }
+
+  .temperature {
+    font-size: 60px;
+    font-weight: 700;
+    align-items: end;
+  }
+}
+
+
   
   .remove-button {
     position: relative;
@@ -55,4 +67,5 @@ body {
   .condition-icon {
     width: 100px;
     height: 100px;  
+
 }
