@@ -39,13 +39,15 @@ body {
   padding: 20px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 
+  .city-name {
+    font-size: clamp(1rem, 0.75rem + 3.333vw, 2.75rem);
+    position: absolute;
+  }
   .country-name {
     margin-top: 8px;
     margin-bottom: 8px;
-  }
-
-  .city-name {
-    font-size: clamp(1rem, 0.75rem + 3.333vw, 2.75rem);
+    position: relative;
+    top: 50px;
   }
 
   .temperature {
@@ -87,4 +89,6 @@ body {
 .condition-icon {
   width: 100px;
   height: 100px;
+  position: relative;
+  top: 50px;
 }
