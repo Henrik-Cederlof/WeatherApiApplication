@@ -1,6 +1,7 @@
 import { getTemeratureBYCity } from './functions/getTemeratureBYCity';
 import { getCloudsByCity } from './functions/getCloudsByCity';
 import { getWeatherCondition } from './functions/getWeatherCondition';
+import { getCurrentTime } from './functions/getCurrentTime';
 
 import './style.scss';
 
@@ -17,8 +18,7 @@ const createWeatherCard = (cityName: string, temperature: number, condition: str
   leftSection.className = 'left-section';
 
   const removeBtn = document.createElement('div');
-  leftSection.className = 'left-section';
-  removeBtn.className = 'remove-btn';
+  removeBtn.className = 'remove-button';
 
   const cityElement = document.createElement('h2');
   cityElement.className = 'city-name';
@@ -44,11 +44,11 @@ const createWeatherCard = (cityName: string, temperature: number, condition: str
     card.remove();
   });
 
-  removeButton.appendChild(removeBtn);
   // Lägg till i kortet
   card.appendChild(removeBtn);
   card.appendChild(leftSection);
   card.appendChild(temeratureElement);
+  card.appendChild(removeButton);
 
   return card;
 }

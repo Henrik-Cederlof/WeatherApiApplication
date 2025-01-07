@@ -39,7 +39,18 @@ body {
     
   }
   
-  
+  .remove-button {
+    position: relative;
+    left: 150px;
+    top: 25px;
+    background-color: #f0f0f0;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
   
   .condition-icon {
     width: 100px;
