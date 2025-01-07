@@ -20,7 +20,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
-
 }
 
 #search {
@@ -40,9 +39,9 @@ body {
   padding: 20px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 
-
   .country-name {
-    margin: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .city-name {
@@ -55,7 +54,6 @@ body {
     align-items: end;
   }
 }
-
 
 .left-section {
   align-items: center;
@@ -76,7 +74,7 @@ body {
 }
 
 .remove-button {
-  width: 25px; 
+  width: 25px;
   height: 25px;
   background-color: #d81d1d6b;
   border: none;
@@ -85,11 +83,8 @@ body {
   cursor: pointer;
   margin-top: 10px;
 }
-  
 
-  
-  .condition-icon {
-    width: 100px;
-    height: 100px;  
-
+.condition-icon {
+  width: 100px;
+  height: 100px;
 }
