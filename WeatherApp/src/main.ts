@@ -27,13 +27,14 @@ const createWeatherCard = (
   leftSection.className = "left-section";
   removeBtn.className = "remove-btn";
 
-  const countryElement = document.createElement("h2");
+  const cityElement = document.createElement("h2");
+  cityElement.className = "city-name";
+  cityElement.textContent =
+    cityName.charAt(0).toUpperCase() + cityName.slice(1);
+
+  const countryElement = document.createElement("h3");
   countryElement.className = "country-name";
   countryElement.textContent = country;
-
-  const cityElement = document.createElement("h3");
-  cityElement.className = "city-name";
-  cityElement.textContent = cityName;
 
   const temeratureElement = document.createElement("div");
   temeratureElement.className = "temperature";
@@ -44,8 +45,8 @@ const createWeatherCard = (
   conditionElement.src = condition;
   conditionElement.alt = "Weather condition";
 
-  leftSection.appendChild(countryElement);
   leftSection.appendChild(cityElement);
+  leftSection.appendChild(countryElement);
   leftSection.appendChild(conditionElement);
 
   const removeButton = document.createElement("button");
