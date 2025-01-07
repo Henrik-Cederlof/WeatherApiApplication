@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "localtime",
+    "precip_mm",
+    "precip_in",
+    "feelslike_c",
+    "feelslike_f",
+    "heatindex_c",
+    "heatindex_f",
+    "dewpoint_c",
+    "dewpoint_f"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
