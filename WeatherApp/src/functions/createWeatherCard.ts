@@ -4,7 +4,8 @@ export const createWeatherCard = (
   cityName: string,
   temperature: number,
   condition: string,
-  country: string
+  country: string,
+  time: string
 ) => {
   const weatherCard = createHTMLElement("div");
   weatherCard.className = "weather-card";
@@ -29,6 +30,10 @@ export const createWeatherCard = (
   temperatureElement.className = "temperature";
   temperatureElement.textContent = `${temperature}°C`;
 
+  const timeElement = createHTMLElement("p");
+  timeElement.className = "time";
+  timeElement.textContent = time;
+
   const conditionElement = createHTMLElement("img");
   conditionElement.className = "condition-icon";
   conditionElement.src = condition;
@@ -46,6 +51,8 @@ export const createWeatherCard = (
   leftSide.appendChild(conditionElement);
 
   middleSide.appendChild(temperatureElement);
+  middleSide.appendChild(timeElement);
+
   rightSide.appendChild(removeButton);
 
   // Lägg till i kortet

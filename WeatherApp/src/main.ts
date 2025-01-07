@@ -17,12 +17,14 @@ AllDomEl.searchButton.addEventListener("click", async (event) => {
       const temperature = await getTemperatureByCity(cityName);
       const condition = await getWeatherCondition(cityName);
       const country = await getCountryByCity(cityName);
+      const time = await getCurrentTime(cityName);
 
       const weatherCard = createWeatherCard(
         cityName,
         temperature,
         condition,
-        country
+        country,
+        time
       );
       AllDomEl.mainContainer.appendChild(weatherCard);
 
