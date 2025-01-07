@@ -17,16 +17,15 @@ const createWeatherCard = (
   condition: string,
   country: string
 ) => {
-  const card = document.createElement("div");
-  card.className = "weather-card";
+  const weatherCard = document.createElement("div");
+  weatherCard.className = "weather-card";
 
-  const leftSection = document.createElement("div");
-  leftSection.className = "left-section";
-
-  const removeBtn = document.createElement("div");
-  leftSection.className = "left-section";
-  removeBtn.className = "remove-btn";
-
+  const leftSide = document.createElement("div");
+  leftSide.className = "left-section";
+  const middleSide = document.createElement("div");
+  middleSide.className = "middle-section";
+  const rightSide = document.createElement("div");
+  rightSide.className = "right-section";
 
   const cityElement = document.createElement("h2");
   cityElement.className = "city-name";
@@ -46,24 +45,27 @@ const createWeatherCard = (
   conditionElement.src = condition;
   conditionElement.alt = "Weather condition";
 
-  leftSection.appendChild(cityElement);
-  leftSection.appendChild(countryElement);
-  leftSection.appendChild(conditionElement);
-
   const removeButton = document.createElement("button");
   removeButton.className = "remove-button";
   removeButton.textContent = "X";
   removeButton.addEventListener("click", () => {
-    card.remove();
+    weatherCard.remove();
   });
 
-  // Lägg till i kortet
-  card.appendChild(removeBtn);
-  card.appendChild(leftSection);
-  card.appendChild(temeratureElement);
-  card.appendChild(removeButton);
+  leftSide.appendChild(cityElement);
+  leftSide.appendChild(countryElement);
+  leftSide.appendChild(conditionElement);
 
-  return card;
+  middleSide.appendChild(temeratureElement);
+  rightSide.appendChild(removeButton);
+
+
+  // Lägg till i kortet
+  weatherCard.appendChild(leftSide);
+  weatherCard.appendChild(middleSide);
+  weatherCard.appendChild(rightSide);
+  
+  return weatherCard;
 };
 
 searchButton.addEventListener("click", async (event) => {
