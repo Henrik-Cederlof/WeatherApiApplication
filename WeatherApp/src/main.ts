@@ -7,7 +7,6 @@ import './style.scss';
 
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const searchButton = document.getElementById('search-button') as HTMLButtonElement;
-const temperatureDiaplay = document.getElementById('temperature-display') as HTMLDivElement;
 const mainContainer = document.getElementById('main') as HTMLDivElement;
 
 const createWeatherCard = (cityName: string, temperature: number, condition: string) => {
@@ -16,6 +15,10 @@ const createWeatherCard = (cityName: string, temperature: number, condition: str
 
   const leftSection = document.createElement('div');
   leftSection.className = 'left-section';
+
+  const removeBtn = document.createElement('div');
+  leftSection.className = 'left-section';
+  removeBtn.className = 'remove-btn';
 
   const cityElement = document.createElement('h2');
   cityElement.className = 'city-name';
@@ -34,13 +37,23 @@ const createWeatherCard = (cityName: string, temperature: number, condition: str
   leftSection.appendChild(conditionElement);
 
 
+  const removeButton = document.createElement('button');
+  removeButton.className = 'remove-button';
+  removeButton.textContent = 'X';
+  removeButton.addEventListener('click', () => {
+    card.remove();
+  });
 
+  removeButton.appendChild(removeBtn);
   // Lägg till i kortet
+  card.appendChild(removeBtn);
   card.appendChild(leftSection);
   card.appendChild(temeratureElement);
 
   return card;
 }
+
+
 
 searchButton.addEventListener('click', async (event) => {
   event.preventDefault();
@@ -56,8 +69,8 @@ searchButton.addEventListener('click', async (event) => {
       searchInput.value = '';
     }
     catch(error) {
-      console.error(error);
-      temperatureDiaplay.textContent = 'City not found';
+      console.error('City not found');
+      
     }
   }
   
